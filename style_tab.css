@@ -1,0 +1,13 @@
+body {
+    background-color: #D9D9D9;
+}
+.navbar {
+    background-color: #060b3b;
+}
+.navbar li a {
+    color: white;
+    text-decoration: none;
+}
+li {
+    list-style-type: none;
+}
