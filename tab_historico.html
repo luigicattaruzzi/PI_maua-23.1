@@ -29,11 +29,11 @@
 
     <div class="m-4 text-center">
         <h2>Histórico</h2>
-
+        <input id="input" type="text" placeholder="Filtre usando o RA ou ativo">
         
     </div>
     <div>
-        <table class="table container table-striped">
+        <table id="table_1" class="table container table-striped">
             <thead>
                 <tr>
                     <th>RA</th>
@@ -43,19 +43,17 @@
                     <th>Data/Hora devol.</th>
                     <th>Func empr.</th>
                     <th>Func devol</th>
-                    <th>Status</th>
                 </tr>
             </thead>
             <tbody class="table-group-divider">
                 <tr>
                     <td>22.00611-7</td>
                     <td> <a href="#ModalAluno" data-bs-toggle="modal" data-bs-target="#ModalAluno">Enrico Ricardo Saez</a></td>
-                    <td>??????</td>
+                    <td>123456</td>
                     <td>01/01/2023</td>
                     <td>null</td>
                     <td>Roni</td>
                     <td>null</td>
-                    <td>Em andamento</td>
                 </tr>
             </tbody>
         </table>
@@ -67,12 +65,12 @@
           var input, filter, table, tr, td, i, txtValue;
           input = document.getElementById("input");
           filter = input.value.toUpperCase();
-          table = document.getElementById("table");
+          table = document.getElementById("table_1");
           tr = table.getElementsByTagName("tr");
         
           // Loop through all table rows, and hide those who don't match the search query
           for (i = 0; i < tr.length; i++) {
-            td = tr[i].getElementsByTagName("td")[0];
+            td = tr[i].getElementsByTagName("td")[0,3];
             if (td) {
               txtValue = td.textContent || td.innerText;
               if (txtValue.toUpperCase().indexOf(filter) > -1) {
