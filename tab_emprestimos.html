@@ -29,15 +29,16 @@
             </div>
         </div>
     </nav>
-    <div class="m-4
-    ">
+
+    <div class="m-4 container text-center">
         <h2>Empréstimos Ativos</h2>
-        <button>Iniciar Empréstimos com horário de devolução</button>
-        <button>Iniciar Empréstimos sem horário de devolução</button>
+        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#ModalEmprestimoComHora">Iniciar empréstimos com horário de devolução</button>
+        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#ModalEmprestimoSemHora">Iniciar empréstimos sem horário de devolução</button>
+
+        
     </div>
     <div>
-        <table class="table
-        ">
+        <table class="table container table-striped">
             <thead>
                 <tr>
                     <th>RA</th>
@@ -53,7 +54,7 @@
             <tbody class="table-group-divider">
                 <tr>
                     <td>22.00611-7</td>
-                    <td> <a href="#">Enrico Ricardo Saez</a></td>
+                    <td> <a href="#ModalAluno" data-bs-toggle="modal" data-bs-target="#ModalAluno">Enrico Ricardo Saez</a></td>
                     <td>??????</td>
                     <td>01/01/2023</td>
                     <td>null</td>
@@ -64,6 +65,99 @@
             </tbody>
         </table>
     </div>
+
+
+<!-- Modal Aluno-->
+<div class="modal fade" id="ModalAluno">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="ModalAluno">Enrico Ricardo Saez</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <p>RA:</p>
+            <p>Status:</p>
+            <p>Laboratórios:</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+<!-- Modal Com Horario-->
+<div class="modal fade" id="ModalEmprestimoComHora">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="ModalEmprestimoComHora">Escaneie o ativo do Notebook</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <input class="container" type="text" placeholder="Clique aqui e utilize a leitora para escanear o ativo" id="barcode">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="ModalEmprestimoComHora2">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="ModalEmprestimoComHora2">Escaneie QRCode do aluno</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <input class="container" type="text" placeholder="Escaneie o QRCode do aluno" id="barcode">
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+
+
+
+<!-- Modal Sem Horario-->
+<div class="modal fade" id="ModalEmprestimoSemHora">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="ModalEmprestimoComHora">Escaneie o ativo do Notebook</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <input class="container" type="text" placeholder="Clique aqui e utilize a leitora para escanear o ativo" id="barcode">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="ModalEmprestimoSemHora2">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="ModalEmprestimoComHora2">Escaneie o QRCode do aluno</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <input class="container" type="text" placeholder="Escaneie o QRCode do aluno" id="barcode">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    $("#barcode").keyup(function() {
+      if ($(this).val().length >= 5)
+        $('#modal').submit();
+    })
+  </script>
+
+
 </body>
 
 </html>

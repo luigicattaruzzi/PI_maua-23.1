@@ -12,10 +12,14 @@ li {
     list-style-type: none;
 }
 
+.btn {
+  background-color: white;
+  border-color: #060b3b;
+}
 
-
-* {
-  box-sizing: border-box;
+.btn:hover {
+  background-color: #060b3b;
+  color: white;
 }
 
 #input {
@@ -24,24 +28,4 @@ li {
   padding: 12px 20px 12px 40px;
   border: 1px solid #ddd;
   margin-bottom: 12px;
-}
-
-#table {
-  border-collapse: collapse;
-  width: 100%;
-  border: 1px solid #ddd;
-  font-size: 18px;
-}
-
-#table th, #table td {
-  text-align: left;
-  padding: 12px;
-}
-
-#table tr {
-  border-bottom: 1px solid #ddd;
-}
-
-#table tr.header, #table tr:hover {
-  background-color: #f1f1f1;
 }
