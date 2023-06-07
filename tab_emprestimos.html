@@ -9,6 +9,7 @@
     integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
     crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style_tab.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Empréstimos Ativos</title>
 </head>
 
@@ -22,8 +23,7 @@
                 <ul class="navbar m-2 ">
                     <li class="mx-3"><a href="/tab_emprestimos.html">Empréstimos Ativos</a></li>
                     <li class="mx-3"><a href="/tab_historico.html">Histórico</a></li>
-                    <li class="mx-3"><a href="/tab_alunos.html">Alunos</a></li>
-                    <li class="mx-3"><a href="/tab_notebooks.html">Notebooks</a></li>
+                    <li class="mx-3"><a href="/tab_manutencao.html">Manutenção</a></li>
                     <li class="mx-3"><a href="/estatisticas.html">Estatísticas</a></li>
                 </ul>
             </div>
@@ -72,9 +72,9 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-            <p>RA:</p>
-            <p>Status:</p>
-            <p>Laboratórios:</p>
+            <p><strong>RA: </strong>Lorem, ipsum.</p>
+            <p><strong>Status: </strong>Lorem, ipsum.</p>
+            <p><strong>Laboratórios: </strong>Lorem, ipsum dolor.</p>
         </div>
       </div>
     </div>
@@ -84,76 +84,108 @@
 
 
 
-<!-- Modal Com Horario-->
+<!-- Modal Com Horario 1 ATIVO-->
 <div class="modal fade" id="ModalEmprestimoComHora">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="ModalEmprestimoComHora">Escaneie o ativo do Notebook</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-            <input class="container" type="text" placeholder="Clique aqui e utilize a leitora para escanear o ativo" id="barcode">
-        </div>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="ModalEmprestimoComHora">Escaneie o ativo do Notebook</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <input class="container" type="text" placeholder="Clique aqui e utilize a leitora para escanear o ativo" id="barcode">
       </div>
     </div>
   </div>
+</div>
 
-  <div class="modal fade" id="ModalEmprestimoComHora2">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="ModalEmprestimoComHora2">Escaneie QRCode do aluno</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-            <input class="container" type="text" placeholder="Escaneie o QRCode do aluno" id="barcode">
-        </div>
+<!-- Modal com horario 2 QR CODE-->
+<div class="modal fade" id="ModalEmprestimoComHora2">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="ModalEmprestimoComHora2">Escaneie QRCode do aluno</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <input class="container" type="text" placeholder="Escaneie o QRCode do aluno" id="barcode2">
       </div>
     </div>
   </div>
-  
-  
+</div>
 
-
-
-<!-- Modal Sem Horario-->
+<!-- Modal sem Horario 1 ATIVO-->
 <div class="modal fade" id="ModalEmprestimoSemHora">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="ModalEmprestimoComHora">Escaneie o ativo do Notebook</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-            <input class="container" type="text" placeholder="Clique aqui e utilize a leitora para escanear o ativo" id="barcode">
-        </div>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="ModalEmprestimoComHora">Escaneie o ativo do Notebook</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <input class="container" type="text" placeholder="Clique aqui e utilize a leitora para escanear o ativo" id="barcode">
       </div>
     </div>
   </div>
+</div>
 
-  <div class="modal fade" id="ModalEmprestimoSemHora2">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="ModalEmprestimoComHora2">Escaneie o QRCode do aluno</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-            <input class="container" type="text" placeholder="Escaneie o QRCode do aluno" id="barcode">
-        </div>
+<!-- Modal sem Horario 1 ATIVO-->
+<div class="modal fade" id="ModalEmprestimoSemHora2">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="ModalEmprestimoComHora2">Escaneie o QRCode do aluno</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <input class="container" type="text" placeholder="Escaneie o QRCode do aluno" id="barcode">
       </div>
     </div>
   </div>
-
-  <script>
-    $("#barcode").keyup(function() {
-      if ($(this).val().length >= 5)
-        $('#modal').submit();
-    })
-  </script>
+</div>
 
 
+<script>
+  $(document).ready(function() {
+    // Modal1 - ativo
+    $('#ModalEmprestimoComHora').on('shown.bs.modal', function() {
+      $('#barcode').focus();
+    });
+
+    $('#barcode').on('input', function() {
+      var barcodeValue = $(this).val();
+      if (barcodeValue.length === 5) {
+        $('#ModalEmprestimoComHora').modal('hide');
+        $('#ModalEmprestimoComHora2').modal('show');
+        $('#barcode2').focus();
+      }
+    });
+
+    // enter
+    $('#barcode').on('keyup', function(event) {
+      if (event.keyCode === 13) {
+        var barcodeValue = $(this).val();
+        if (barcodeValue.length === 5) {
+          $('#ModalEmprestimoComHora').modal('hide');
+          $('#ModalEmprestimoComHora2').modal('show');
+          $('#barcode2').focus();
+        }
+      }
+    });
+
+    // Modal2 - qrcode
+    $('#ModalEmprestimoComHora2').on('shown.bs.modal', function() {
+      $('#barcode2').focus();
+    });
+
+  //SUBMIT (ChatGPT q fez, dps confere)
+    $('#barcode2').on('input', function() {
+      var barcodeValue2 = $(this).val();
+      if (barcodeValue2.length === 5) {
+        $('#ModalEmprestimoComHora2').submit();
+      }
+    });
+  });
+</script>
 </body>
-
 </html>
